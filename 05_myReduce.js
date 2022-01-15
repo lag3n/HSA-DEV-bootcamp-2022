@@ -12,6 +12,13 @@
     -> 20
 */
 
-const myReduce = (arr, f, init) => {}
+const myReduce = (arr, f, init) => {
+  let acc = init;
+  for (let i = 0; i < arr.length; i++)
+  {
+    acc = f(acc, arr[i]);
+  }
+  return acc;
+}
 
 module.exports = myReduce

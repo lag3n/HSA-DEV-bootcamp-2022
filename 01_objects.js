@@ -28,23 +28,34 @@ const TreeOfLife = {
   bestDomain: 'archae',
 }
 
-//TODO -- Write a function which returns the domain "archae"
-const getArchae = () => {}
+// Write a function which returns the domain "archae"
+const getArchae = () => {
+  return (TreeOfLife.archae);
+}
 
-// TODO -- Write a function which returns the array of humans
-const getHumans = () => {}
+// Write a function which returns the array of humans
+const getHumans = () => {
+  return (TreeOfLife.eukarya.animalia.humans);
+}
 
-// TODO -- Write a function which adds a name to the array of humans
-const addHuman = (name) => {}
+// Write a function which adds a name to the array of humans
+const addHuman = (name) => {
+  TreeOfLife.eukarya.animalia.humans.push(name);
+}
 
-// TODO -- Write a fuction which returns the data representing the "bestDomain"
-const getBestDomain = () => {}
+// Write a fuction which returns the data representing the "bestDomain"
+const getBestDomain = () => {
+  let key = TreeOfLife.bestDomain;
+  return (TreeOfLife[key]);
+}
 
-// TODO -- Write a function which sets the best domain to "eukarya" and then returns the "bestDomain"
-const setGetBestDomain = () => {}
+// Write a function which sets the best domain to "eukarya" and then returns the "bestDomain"
+const setGetBestDomain = () => {
+  TreeOfLife.bestDomain = "eukarya";
+  return (getBestDomain());
+}
 
 /**
-  TODO
   Write a function using destructuring and object renaming which returns an array with all the ranks like:
   (Don't hardcode it, pull it from the TreeOfLife)
   [
@@ -53,10 +64,16 @@ const setGetBestDomain = () => {}
     'phylum',
   ]
  */
-const getRanks = () => {}
+const getRanks = () => {
+  const {rank, eukarya: {rank : eukaryaRank, animalia: {rank : animaliaRank}}} = TreeOfLife;
+  return ([rank, eukaryaRank, animaliaRank]);
+}
 
-// TODO -- Write a function which uses destructuring and the rest operator to return everything BUT the "eukarya"
-const noEukaryotes = () => {}
+// Write a function which uses destructuring and the rest operator to return everything BUT the "eukarya"
+const noEukaryotes = () => {
+  const byebye = (({ eukarya, ...others }) => others)(TreeOfLife);
+  return (byebye);
+}
 
 module.exports = {
   getArchae,

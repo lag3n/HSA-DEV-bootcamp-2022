@@ -10,6 +10,17 @@
     -> [1, 3]
 */
 
-const myFilter = (arr, f) => {}
+const myFilter = (arr, f) => {
+  const res = [];
+  arr.map(function(n)
+    {let bool = f(n);
+      if (bool)
+      {
+        res.push(n);
+      }
+    });
+  return (res);
+}
+
 
 module.exports = myFilter

@@ -5,10 +5,14 @@
   flips a coin and tells the user whether or not their guess was correct.
  */
 
+const callback = (arg) => {
+  coinToss(arg.guess, console.log);
+}
+
 const coinToss = (guess, callback) => {
-  const result = Math.round(Math.random())
-  const didWin = guess === result
-  callback(didWin)
+  const result = Math.round(Math.random());
+  const didWin = guess === result;
+  callback(didWin);
 }
 
 const getUser = (callback) => {
@@ -19,3 +23,5 @@ const getUser = (callback) => {
   }
   callback(user)
 }
+
+getUser(callback);
