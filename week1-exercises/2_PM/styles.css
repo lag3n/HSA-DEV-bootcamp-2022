@@ -1,0 +1,59 @@
+/* Playing with IDs */
+/* creates a special footer that follows scrollbar */
+#bottom {
+    position: fixed;
+    padding: 10px 10px 50px 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Playing with styling tags */
+/* formats anchors with underlining with hovering */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* giving margin to the page */
+body {
+    margin: 35px;
+}
+
+/* creates default image size, overridden if image looks strange */
+img {
+    width: 500px;
+    height: 600px;
+}
+
+
+/* Playing with classes */
+/* aligns to right hand side */
+.rightAlign {
+    position: relative;
+    float: right;
+}
+
+/* aligns text in the center */
+.center {
+    text-align: center;
+}
+
+.center2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* makes text bold */
+.bold {
+    font-weight: bold;
+}
+
+tr:nth-child(1) {
+    background-color: #D6EEEE;
+  }
+  
+  

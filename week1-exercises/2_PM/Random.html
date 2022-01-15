@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- add Bootstrap, CSS, JS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Random Exhibit</title>
+        <script src="javascript.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <!-- implement Bootstrap alert as header, implements buttons to change background color -->
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Welcome to Random!</h4>
+                <p>Oh boy. Here come the random pictures!</p>
+            </div>
+            <button type="button" class="btn btn-outline-dark rightAlign" onclick="changeBackground('white');">Default</button>
+            <button type="button" class="btn btn-primary rightAlign" onclick="changeBackground('aqua');">Blue</button>
+            <button type="button" class="btn btn-success rightAlign" onclick="changeBackground('lime');">Green</button>
+            <button type="button" class="btn btn-danger rightAlign" onclick="changeBackground('red');">Red</button>
+            <p class="rightAlign bold">&#160;&#160;Change the background color!&#160;&#160;</p>
+        </header>
+
+        <div>
+            My camera roll has many random photos. From accidental screenshots of my home or lock screen to accidental pictures my phone takes in my pocket (yes it's all fuzzy blackness), the majority of these photos are not worth any viewing time. Yet there are a few cherished ones: From a sleepy Remy to a excited doggo to a historical reenactment of some kind, enjoy!
+        </div>
+        <!-- creates ordered list as a de facto table of contents -->
+        <div>
+            <ol>
+                <li>Floof</li>
+                <li>Sleepy Remy</li>
+                <li>Historical</li>
+            </ol>
+        </div>
+        <div>
+            <h4>Floof</h4>
+                Native to Iceland, the Icelandic sheep dogs are just so fluffy!!!
+            <br/>
+            <img src="Images/Floof.jpg" alt="Floofy Dog" style="width: 550px; height: 550px">
+        </div>
+        <div>
+            <h4>Sleepy Remy</h4>
+                The kitty we all know and love, perhaps Remy got a little tired from PSetting<br/>
+                as well.
+            <br/>
+            <img src="Images/Remy.jpg" alt="Sleepy Remy">
+        </div>
+        <div>
+            <h4>Historical Reenactment</h4>
+                Within the heart of Boston lies a fantastical historical play with a very<br/>
+                informative story!
+            <br/>
+            <img src="Images/Historical.jpg" alt="Historical Reenactment">
+        </div>
+
+        <!-- creates a navigation footer that follows the scrollbar -->
+        <div id="bottom" class="center">
+            Navigate to some other pages!<br/>
+            <a href="index.html">Homepage</a><br/>
+            <a href="Ceramics.html">Ceramics Exhibit</a><br/>
+            <a href="Academics.html">Academics Exhibit</a><br/>
+            Want to look up other images of these? Use Google!<br/>
+            <form action="https://www.google.com/search" method="get">
+                <input autocomplete="off" autofocus name="q" placeholder="Search" type="text">
+                <input type="submit">
+            </form>
+        </div>
+    </body>
+</html>
